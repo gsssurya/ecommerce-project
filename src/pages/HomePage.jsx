@@ -1,5 +1,4 @@
 import './HomePage.css'
-import './header.css'
 
 function HomePage(){
     return (
