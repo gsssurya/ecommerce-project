@@ -1,11 +1,13 @@
 import './OrdersPage.css'
 import Header from '../components/Header';
+import { Link } from 'react-router';
+import ordersIcon from '../assets/images/orders-favicon.png'
 
 function OrdersPage () {
     return (
         <>
             <title>Orders</title>
-            
+            <link rel="icon" type="image/svg+xml" href={ordersIcon} />
             <Header/>
 
             <div class="orders-page">
@@ -54,11 +56,11 @@ function OrdersPage () {
                         </div>
 
                         <div class="product-actions">
-                        <a href="/tracking">
+                        <Link to="/tracking">
                             <button class="track-package-button button-secondary">
                             Track package
                             </button>
-                        </a>
+                        </Link>
                         </div>
 
                         <div class="product-image-container">
@@ -82,11 +84,11 @@ function OrdersPage () {
                         </div>
 
                         <div class="product-actions">
-                        <a href="/tracking">
+                        <Link to="/tracking">
                             <button class="track-package-button button-secondary">
                             Track package
                             </button>
-                        </a>
+                        </Link>
                         </div>
                     </div>
                 </div>
@@ -133,11 +135,11 @@ function OrdersPage () {
                         </div>
 
                         <div class="product-actions">
-                        <a href="/tracking">
+                        <Link to="/tracking">
                             <button class="track-package-button button-secondary">
                             Track package
                             </button>
-                        </a>
+                        </Link>
                         </div>
                     </div>
                     </div>

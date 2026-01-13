@@ -1,10 +1,12 @@
 import './CheckoutPage.css'
 import CheckoutHeader from './CheckoutHeader';
+import cartIcon from '../../assets/images/cart-favicon.png'
 
 function CheckoutPage () {
     return (
         <>
             <title>Checkout</title>
+            <link rel="icon" type="image/svg+xml" href={cartIcon} />
             <CheckoutHeader/>
                 <div className="checkout-page">
                 <div className="page-title">Review your order</div>
