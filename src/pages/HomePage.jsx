@@ -6,11 +6,17 @@ import homeIcon from '../assets/images/home-favicon.png'
 
 function HomePage(){
     const [products, setProducts] = useState([]);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         axios.get('http://localhost:3000/api/products')
             .then((respons) => {
                 setProducts(respons.data)
+            });
+
+        axios.get('http://localhost:3000/api/cart-items')
+            .then((respons) => {
+                setCart(respons.data);
             });
     }, []);
     
@@ -19,7 +25,7 @@ function HomePage(){
             <title>Ecommerce Project</title>
             <link rel="icon" type="image/svg+xml" href={homeIcon} />
 
-            <Header/>
+            <Header cart={cart}/>
 
             <div className="home-page">
                 <div className="products-grid">
