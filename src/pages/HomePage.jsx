@@ -4,19 +4,13 @@ import './HomePage.css'
 import Header from '../components/Header';
 import homeIcon from '../assets/images/home-favicon.png'
 
-function HomePage(){
+function HomePage({ cart }){
     const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         axios.get('/api/products')
             .then((respons) => {
                 setProducts(respons.data)
-            });
-
-        axios.get('/api/cart-items')
-            .then((respons) => {
-                setCart(respons.data);
             });
     }, []);
     
